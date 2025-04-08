@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Bienvenido a Seguridad Total</h2>
+    <p>Ofrecemos soluciones integrales de seguridad para proteger lo que más importa.</p>
+    <a href="{{ url_for('acerca_de') }}"><button>Quieres conocernos?</button></a>
+    
+</section>
+
+<section class="testimonials">
+    <h3>Testimonios</h3>
+    <p>"Gracias a Seguridad Total "VanEly", mi hogar está completamente protegido." - Doria Medina</p>
+    <p>"Gracias a Seguridad Total "VanEly", mi familia puede dormir sin miedo." - Roberto Bolañoz</p>
+</section>
+
+<section class="advantages">
+    <h3>Ventajas</h3>
+    <ul>
+        <li>Monitoreo 24/7</li>
+        <li>Tecnología avanzada</li>
+        <li>Servicio personalizado</li>
+    </ul>
+</section>
+{% endblock %}

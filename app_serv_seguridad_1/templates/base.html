@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Empresa de Seguridad{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div >
+            <table>
+                <tr>
+                    <td> <img src="../static/img/escudo.png" height="80" weight="80" alt="Logo VanEly"></td>
+                    <td><h1>Seguridad Total "VanEly"</h1></td>
+                </tr>
+            </table>
+                       
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('acerca_de') }}">Quiénes Somos</a></li>
+                <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div align="left"><p >&copy; 2025 Seguridad Total VanEly. Todos los derechos reservados.</p></div>
+        
+        <div align="right"><p>Puedes seguirnos en:</p>
+            <div class="social">
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.Instagram.com">Instagram</a>
+                <a href="https://www.x.com">X</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
